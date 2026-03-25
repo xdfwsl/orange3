@@ -193,7 +193,8 @@ PACKAGES = find_packages(include=("Orange*",))
 # hierarchy
 PACKAGE_DATA = {
     "Orange": ["datasets/*.{}".format(ext)
-               for ext in ["tab", "csv", "basket", "info", "dst", "metadata"]],
+               for ext in ["tab", "csv", "basket", "info", "dst", "metadata"]]
+              + ["i18n/*.json"],
     "Orange.canvas": ["icons/*.png", "icons/*.svg"],
     "Orange.canvas.workflows": ["*.ows"],
     "Orange.widgets": ["icons/*.png",

@@ -396,6 +396,10 @@ class OMain(Main):
 
     def setup_application(self):
         super().setup_application()
+        # Set Chinese as default language if not configured yet
+        settings = QSettings()
+        if not settings.contains("application/language"):
+            settings.setValue("application/language", "中文")
         clear_settings_flag = os.path.join(widget_settings_dir(),
                                            "DELETE_ON_START")
         # NOTE: No OWWidgetBase subclass should be imported before this

@@ -17,6 +17,7 @@ recursive-include distribute *.svg *.desktop
 include requirements*.txt
 
 recursive-include i18n *.jaml *.yaml
+recursive-include Orange/i18n *.json *.py
 
 recursive-include doc/visual-programming/build/htmlhelp *
 
